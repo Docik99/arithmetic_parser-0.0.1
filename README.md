@@ -21,7 +21,7 @@ int main()
             break;
         case '%': cout << (num1 % num2 )<< endl;
             break;
-        case '&': cout  << (num1 % num2) << endl;
+        case '&': cout  << (num1 & num2) << endl;
             break;
         case '|': cout  << (num1 | num2) << endl;
             break;
