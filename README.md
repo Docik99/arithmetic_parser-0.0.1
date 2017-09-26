@@ -4,45 +4,60 @@ using namespace std;
 
 int main()
 {
-    int num1 , num2;
-    char op;
+    int num1 , num2; char op , op2;
 
     cin >> num1 >> op;
 
-    if (op == ' > ' || op == ' < ')
-    {
-        cin >> op >> num2;
-    }
+   if (op == '<' || op == '>')
+   {
+           cin >> op2 >> num2;
+
+       if (op == '<' && op2 == '>')
+       {
+           cout << "ОШИБКА";
+       }
+       if (op == '<' && op2 == '<')
+       {
+           cout << (num1 << num2) << endl;
+       }
+       if (op == '>' && op2 == '>')
+       {
+           cout << (num1 >> num2) << endl;
+       }
+   }
     else
-    {
-        cin >> num2;
-    }
+   {
 
-    switch (op)
-    {
-        case '+': cout  << (num1 + num2) <<endl;
-            break;
-        case '-': cout   << (num1 - num2) << endl;
-            break;
-        case '*': cout   << ( num1 * num2) << endl;
-            break;
-        case '/': cout  << (double)(num1 / num2) << endl;
-            break;
-        case '%': cout << (num1 % num2 )<< endl;
-            break;
-        case '&': cout  << (num1 & num2) << endl;
-            break;
-        case '|': cout  << (num1 | num2) << endl;
-            break;
-        case '^': cout  << (num1 ^ num2) << endl;
-            break;
-        case '>': cout  << (num1 >> num2) << endl;
-            break;
-        case '<': cout  << (num1 << num2) << endl;
-            break;
-            
+       cin >> num2;
+
+       switch (op) {
+           case '+':
+               cout << (num1 + num2) << endl;
+               break;
+           case '-':
+               cout << (num1 - num2) << endl;
+               break;
+           case '*':
+               cout << (num1 * num2) << endl;
+               break;
+           case '/':
+               cout << (double) (num1 / num2) << endl;
+               break;
+           case '%':
+               cout << (num1 % num2) << endl;
+               break;
+           case '&':
+               cout << (num1 & num2) << endl;
+               break;
+           case '|':
+               cout << (num1 | num2) << endl;
+               break;
+           case '^':
+               cout << (num1 ^ num2) << endl;
+               break;
 
 
-    }
+       }
+   }
     return (0);
 }
