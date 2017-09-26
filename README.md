@@ -7,7 +7,16 @@ int main()
     int num1 , num2;
     char op;
 
-    cin>> num1 >> op >>num2;
+    cin >> num1 >> op;
+
+    if (op == ' > ' || op == ' < ')
+    {
+        cin >> op >> num2;
+    }
+    else
+    {
+        cin >> num2;
+    }
 
     switch (op)
     {
@@ -27,11 +36,13 @@ int main()
             break;
         case '^': cout  << (num1 ^ num2) << endl;
             break;
-        case '>>': cout  << (num1 >> num2) << endl;
+        case '>': cout  << (num1 >> num2) << endl;
             break;
-        case '<<': cout  << (num1 << num2) << endl;
+        case '<': cout  << (num1 << num2) << endl;
             break;
-    }
+            
 
+
+    }
     return (0);
 }
