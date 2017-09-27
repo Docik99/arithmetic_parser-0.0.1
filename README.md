@@ -60,7 +60,6 @@ int main()
             case '^':
                 cout << (num1 ^ num2) << endl;
                 break;
-            default: cout << "ОШИБКА";
 
         }
     }
